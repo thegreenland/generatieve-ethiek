@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/generatieve-ethiek/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/basecoat-css@0.3.6/dist/js/basecoat.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/basecoat-css@0.3.6/dist/js/dropdown-menu.min.js" defer></script>
+    <title>automated-morality-twcss</title>
+    <script type="module" crossorigin src="/generatieve-ethiek/assets/index-D7mEO01m.js"></script>
+    <link rel="stylesheet" crossorigin href="/generatieve-ethiek/assets/index-skHFyZjN.css">
+  </head>
+  <body class="dark flex items-center justify-center min-h-screen p-4">
+    <div id="app" class="w-full max-w-2xl h-screen max-h-[600px] flex flex-col rounded-lg border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-950 shadow-lg">
+      <!-- Header -->
+      <div class="flex items-center justify-between p-4 border-b border-neutral-200 dark:border-neutral-800">
+        <div class="flex flex-col">
+          <h1 class="text-2xl font-bold">Generatieve Ethiek</h1>
+          <h4 class="font-mono text-xs">Prompt mij voor advies over verantwoorde inzet van AI in de samenleving.</h3>
+        </div>
+        <div>
+        <button
+          type="button"
+          aria-label="Toggle dark mode"
+          data-tooltip="Toggle dark mode"
+          data-side="bottom"
+          onclick="document.dispatchEvent(new CustomEvent('basecoat:theme'))"
+          class="btn-icon-outline size-8"
+        >
+          <span class="hidden dark:block"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4" /><path d="M12 2v2" /><path d="M12 20v2" /><path d="m4.93 4.93 1.41 1.41" /><path d="m17.66 17.66 1.41 1.41" /><path d="M2 12h2" /><path d="M20 12h2" /><path d="m6.34 17.66-1.41 1.41" /><path d="m19.07 4.93-1.41 1.41" /></svg></span>
+          <span class="block dark:hidden"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" /></svg></span>
+        </button>
+      </div>
+      </div>
+    
+      <!-- Messages Container -->
+      <div id="messages" class="flex-1 overflow-y-auto p-4 space-y-4">
+        <div class="flex gap-3">
+          <div class="flex-1">
+            <p class="text-sm font-bold text-neutral-900 dark:text-neutral-50">LLM:</p>
+            <p class="text-sm text-neutral-700 dark:text-neutral-300 mt-1">Hallo! Goed dat je hier bent. Over welke AI toepassing heb je ethische vragen?</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input Form -->
+      <div id="input" class="p-4 border-t border-neutral-200 dark:border-neutral-800">
+        <form id="chatForm" class="flex gap-2">
+          <input
+            id="messageInput"
+            type="text"
+            placeholder="Typ je vraag..."
+            class="input flex-1"
+            autocomplete="off"
+          />
+          <button
+            type="submit"
+            class="btn btn-primary"
+          >
+            Verstuur
+          </button>
+          <button
+            id="resetBtn"
+            type="button"
+            class="btn btn-outline"
+          >
+            Reset
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
